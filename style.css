@@ -1,0 +1,30 @@
+/*colors*/
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: hsl(216, 12%, 54%);
+    --darkblue: hsl(213, 19%, 18%);
+    --verydarkblue: hsl(216, 12%, 8%);
+}
+
+/*font*/
+@font-face {
+    font-family: OverpassBold, OverpassRegular;
+    src: url('./fonts/Overpass-Bold.ttf'),
+        url('./fonts/Overpass-Regular.ttf');
+}
+
+/*reset*/
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
