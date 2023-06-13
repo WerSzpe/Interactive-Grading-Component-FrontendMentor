@@ -10,20 +10,112 @@
 
 /*font*/
 @font-face {
-    font-family: OverpassBold, OverpassRegular;
-    src: url('./fonts/Overpass-Bold.ttf'),
-        url('./fonts/Overpass-Regular.ttf');
+    font-family: OverpassBold;
+    src: url('./fonts/Overpass-Bold.ttf');
+}
+@font-face {
+    font-family: OverpassRegular;
+    src: url('./fonts/Overpass-Regular.ttf');
 }
 
-/*reset*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width:23.438rem;
+    height: 100vh;
+    padding: 1rem 2rem;
+    background-color: var(--verydarkblue);
+}
+
+.wrapper {
+    color: var(--white);
+    background-image: linear-gradient(var(--darkblue), hsla(216, 12%, 8%, 0.001));
+    border-radius: 0.7rem;
+    padding: 2em;
+}
+
+.rating-card {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.rating-card img{
+    box-shadow: 0px 0px 17px 8px rgba(18, 20, 22, 1);
+}
+.rating-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: OverpassBold;
+}
+.rating-card p {
+    font-size: 0.938rem;
+    font-weight: 400;
+    font-family: OverpassRegular;
+    color: var(--lightgrey);
+}
+.rating-card ul {
+    /*display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    justify-items: center;*/
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 0;
+}
+.rating-card li button{
+    border:none;
+    font-weight: 700;
+    font-family: OverpassBold;
+    font-size: 0.875rem;
+    color: var(--lightgrey);
+    padding: 0.8rem;
+    background-color: var(--darkblue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    
+}
+.rating-card li button:hover {
+    
+    background-color: var(--lightgrey);
+    color: var(--white);
+    transition: 0.4s ease-in;
+}
+.rating-card li button:focus {
+    background-color: var(--orange);
+    color: var(--white);
+}
+.rating-card .submit {
+    border: 0;
+    background-color: var(--orange);
+    font-weight: 700;
+    font-size: 0.875rem;
+    font-family: OverpassRegular;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    border-radius: 2rem;
+    cursor: pointer;
+}
 
 
+
+.thank-card {
+    display: none;
+}
 
 
 
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    color: var(--lightgrey);
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
