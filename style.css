@@ -23,13 +23,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width:23.438rem;
     height: 100vh;
     padding: 1rem 2rem;
     background-color: var(--verydarkblue);
 }
 
 .wrapper {
+    min-width:23.438rem;
+    max-width: 33rem;
     color: var(--white);
     background-image: linear-gradient(var(--darkblue), hsla(216, 12%, 8%, 0.001));
     border-radius: 0.7rem;
@@ -120,6 +121,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 2rem;
 }
 .thank-card img {
     align-self: center;
@@ -159,4 +161,21 @@ body {
     
 .attribution a { 
     color: var(--lightgrey); 
+}
+
+@media screen and (min-width: 920px) {
+    .wrapper {
+        min-width: 30rem;
+    }
+    .rating-card ul {
+        justify-content: space-evenly;
+    }
+    .rating-card li button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding: 2rem;  
+    }
+    
 }
