@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
     <!-- Rating state start -->
-        <div class="rating-card">
+        <div class="rating-card" id="rating">
             <img src="./images/icon-star.svg" alt="star icon">
             <h3>How did we do?</h3>
             <p>
@@ -22,20 +22,20 @@
             to help us improve our offering!
             </p>
             <ul>
-                <li> <button>1</button> </li>
-                <li> <button>2</button> </li>
-                <li> <button>3</button> </li>
-                <li> <button>4</button> </li>
-                <li> <button>5</button> </li>
+                <li> <button value="1" onclick=chosenScore(this)>1</button> </li>
+                <li> <button value="2" onclick=chosenScore(this)>2</button> </li>
+                <li> <button value="3" onclick=chosenScore(this)>3</button> </li>
+                <li> <button value="4" onclick=chosenScore(this)>4</button> </li>
+                <li> <button value="5" onclick=chosenScore(this)>5</button> </li>
             </ul>
-            <button class="submit">Submit</button> 
+            <button id="submit" class="submit" onclick=submitClicked(this)>Submit</button> 
         </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div class="thank-card">
+    <div class="thank-card" id="thanking">
 
-        <h3>You selected <!-- Add rating here --> out of 5</h3>
+        <h3>You selected <span id="score">{}</span> out of 5</h3>
 
         <h2>Thank you!</h2>
 
@@ -49,5 +49,21 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/WerSzpe/" target="_blank">Weronika</a>.
     </div>
+
+    <script>
+        function chosenScore(obj) {
+            let num = obj.value;
+            console.log(num);
+            document.getElementById("submit").setAttribute("value", num);
+            console.log(document.getElementById("submit").hasAttribute("value"));
+            //return obj.value;
+        }
+        function submitClicked(obj) {
+            document.getElementById("rating").style.display = "none";
+            document.getElementById("thanking").style.display = "grid";
+            document.getElementById("score").innerHTML = document.getElementById("submit").value;
+        }
+    </script>
+
 </body>
 </html>

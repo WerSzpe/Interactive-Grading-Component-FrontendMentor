@@ -55,11 +55,7 @@ body {
     color: var(--lightgrey);
 }
 .rating-card ul {
-    /*display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-    justify-items: center;*/
+    
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -103,7 +99,11 @@ body {
     border-radius: 2rem;
     cursor: pointer;
 }
-
+.rating-card .submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transition: 0.4s ease-in;
+}
 
 
 .thank-card {
