@@ -34,8 +34,10 @@
 
     <!-- Thank you state start -->
     <div class="thank-card" id="thanking">
+        
+        <img src="./images/illustration-thank-you.svg" alt="thank you illustration">
 
-        <h3>You selected <span id="score">{}</span> out of 5</h3>
+        <h3>You selected <span id="score"></span> out of 5</h3>
 
         <h2>Thank you!</h2>
 
@@ -53,10 +55,7 @@
     <script>
         function chosenScore(obj) {
             let num = obj.value;
-            console.log(num);
             document.getElementById("submit").setAttribute("value", num);
-            console.log(document.getElementById("submit").hasAttribute("value"));
-            //return obj.value;
         }
         function submitClicked(obj) {
             document.getElementById("rating").style.display = "none";

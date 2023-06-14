@@ -3,7 +3,7 @@
     --orange: hsl(25, 97%, 53%);
     --white: hsl(0, 0%, 100%);
     --lightgrey: hsl(217, 12%, 63%);
-    --mediumgrey: hsl(216, 12%, 54%);
+    --mediumgrey: hsl(217, 9%, 44%);
     --darkblue: hsl(213, 19%, 18%);
     --verydarkblue: hsl(216, 12%, 8%);
 }
@@ -41,18 +41,25 @@ body {
     grid-template-columns: 1fr;
 }
 .rating-card img{
-    box-shadow: 0px 0px 17px 8px rgba(18, 20, 22, 1);
+    background-color: var(--verydarkblue);
+    padding: 0.75rem;
+    border-radius: 50%;
+    
 }
 .rating-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: OverpassBold;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.75rem;
 }
 .rating-card p {
     font-size: 0.938rem;
     font-weight: 400;
     font-family: OverpassRegular;
     color: var(--lightgrey);
+    line-height: 1.5rem;
+    margin-top: 0;
 }
 .rating-card ul {
     
@@ -80,7 +87,7 @@ body {
     
     background-color: var(--lightgrey);
     color: var(--white);
-    transition: 0.4s ease-in;
+    transition: 0.25s ease-in;
 }
 .rating-card li button:focus {
     background-color: var(--orange);
@@ -92,6 +99,7 @@ body {
     font-weight: 700;
     font-size: 0.875rem;
     font-family: OverpassRegular;
+    letter-spacing: 0.15rem;
     color: var(--white);
     text-transform: uppercase;
     padding: 1rem;
@@ -108,15 +116,47 @@ body {
 
 .thank-card {
     display: none;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-
-
+.thank-card img {
+    align-self: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.thank-card h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: OverpassRegular;
+    color: var(--orange);
+    background-color: var(--darkblue);
+    border-radius: 1.6rem;
+    padding: 0.5rem;
+    margin-top: 0.9rem;
+}
+.thank-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: OverpassBold;
+}
+.thank-card p{
+    font-size: 0.938rem;
+    font-weight: 400;
+    font-family: OverpassRegular;
+    color: var(--lightgrey);
+    line-height: 1.5rem;
+}
 
 .attribution { 
     font-size: 11px; 
+    font-weight: 400;
+    font-family: OverpassRegular;
     text-align: center; 
     color: var(--lightgrey);
 }
+    
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--lightgrey); 
 }
